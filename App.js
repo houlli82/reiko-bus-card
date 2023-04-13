@@ -1,7 +1,8 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { Linking } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import Logo from "./assets/vivadog_sign.png";
 import Reiko from "./assets/reiko.jpg";
-import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function App() {
   return (
