@@ -3,6 +3,8 @@ import { Linking } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Logo from "./assets/vivadog_sign.png";
 import Reiko from "./assets/reiko.jpg";
+import Insta from "./assets/instagram.png";
+import Line from "./assets/line.png";
 
 export default function App() {
   return (
@@ -19,6 +21,13 @@ export default function App() {
       </View>
 
       <View style={styles.contact}>
+        <View style={styles.buttonContainer}>
+          <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL('https://www.vivadog.jp'); }}>
+            <Ionicons name="globe-outline" style={styles.icon} size={32} />
+          </TouchableOpacity>
+          <Text style={styles.buttonText}>www.vivadog.jp</Text>
+        </View>
+
         <View style={styles.buttonContainer}>
           <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL(`tel:0426238115`); }}>
             <Ionicons name="call-outline" style={styles.icon} size={32} />
@@ -46,6 +55,23 @@ export default function App() {
           </TouchableOpacity>
           <Text style={styles.buttonText}>〒192-0073, Hachioji-shi, Tokyo</Text>
         </View>
+      </View>
+
+      <View style={styles.bottom}>
+        <View style={styles.socialContainer}>
+          <TouchableOpacity onPress={() => { Linking.openURL('https://www.instagram.com/vivadog_2003/') }}>
+            <Image source={Insta} style={styles.social} />
+          </TouchableOpacity>
+
+          <TouchableOpacity onPress={() => { Linking.openURL('https://lin.ee/TcOvmOB') }} >
+            <Image source={Line} style={styles.social} />
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.footer}>
+          <Text style={styles.footerText}>Built by Mark Houlli, 2023</Text>
+        </View>
+
       </View>
 
     </View>
@@ -126,5 +152,30 @@ const styles = StyleSheet.create({
   icon: {
     color: 'white',
     alignSelf: 'center',
+  },
+  bottom: {
+    flex: 1,
+    backgroundColor: 'white',
+  },
+  socialContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    paddingTop: 12,
+    paddingBottom: 12,
+  },
+  social: {
+    height: 50,
+    width: 50,
+    marginLeft: 12,
+    marginRight: 12,
+  },
+  footer: {
+    flex: 0.6,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  footerText: {
+    color: 'grey',
   }
 });
