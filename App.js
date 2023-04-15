@@ -109,6 +109,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingLeft: 12,
     paddingRight: 12,
+    paddingTop: 12,
     borderBottomColor: 'white',
     borderBottomWidth: 0.3,
   },
@@ -129,6 +130,8 @@ const styles = StyleSheet.create({
     flex: 3,
     justifyContent: 'space-around',
     paddingLeft: 12,
+    paddingTop: 12,
+    paddingBottom: 12,
   },
   buttonContainer: {
     alignItems: 'center',
