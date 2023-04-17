@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, ImageBackground } from 'react-native';
 import { Linking } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import Logo from "./assets/vivadog_sign.png";
@@ -11,8 +11,8 @@ export default function App() {
     <View style={styles.container}>
 
       <View style={styles.header}>
-        <Text style={styles.headerText}>VIVA! DOG</Text>
         <Image source={Logo} style={styles.image} />
+        <Text style={styles.headerText}>VIVA! DOG</Text>
       </View>
 
       <View style={styles.about}>
@@ -21,40 +21,44 @@ export default function App() {
       </View>
 
       <View style={styles.contact}>
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL('https://www.vivadog.jp'); }}>
-            <Ionicons name="globe-outline" style={styles.icon} size={32} />
-          </TouchableOpacity>
-          <Text style={styles.buttonText}>www.vivadog.jp</Text>
-        </View>
+        <ImageBackground resizeMode={'cover'} style={styles.buttons} source={require('./assets/paws.jpg')} >
+          <View>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL('https://www.vivadog.jp'); }}>
+                <Ionicons name="globe-outline" style={styles.icon} size={28} />
+              </TouchableOpacity>
+              <Text style={styles.buttonText}>www.vivadog.jp</Text>
+            </View>
 
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL(`tel:0426238115`); }}>
-            <Ionicons name="call-outline" style={styles.icon} size={32} />
-          </TouchableOpacity>
-          <Text style={styles.buttonText}>042-623-8115</Text>
-        </View>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL(`tel:0426238115`); }}>
+                <Ionicons name="call-outline" style={styles.icon} size={28} />
+              </TouchableOpacity>
+              <Text style={styles.buttonText}>042-623-8115</Text>
+            </View>
 
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL(`tel:08010073207`); }}>
-            <Ionicons name="phone-portrait-outline" style={styles.icon} size={32} />
-          </TouchableOpacity>
-          <Text style={styles.buttonText}>080-1007-3207</Text>
-        </View>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL(`tel:08010073207`); }}>
+                <Ionicons name="phone-portrait-outline" style={styles.icon} size={28} />
+              </TouchableOpacity>
+              <Text style={styles.buttonText}>080-1007-3207</Text>
+            </View>
 
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL('mailto:houlli82@@htomail.co.uk?subject=Enquiries') }}>
-            <Ionicons name="mail-outline" style={styles.icon} size={32} />
-          </TouchableOpacity>
-          <Text style={styles.buttonText}>vivadog2003@gmail.com</Text>
-        </View>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL('mailto:houlli82@@htomail.co.uk?subject=Enquiries') }}>
+                <Ionicons name="mail-outline" style={styles.icon} size={28} />
+              </TouchableOpacity>
+              <Text style={styles.buttonText}>vivadog2003@gmail.com</Text>
+            </View>
 
-        <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL('https://www.google.com/maps/search/?api=1&query=Viva+Dog+Hachioji') }}>
-            <Ionicons name="location-outline" style={styles.icon} size={32} />
-          </TouchableOpacity>
-          <Text style={styles.buttonText}>〒192-0073, Hachioji-shi, Tokyo</Text>
-        </View>
+            <View style={styles.buttonContainer}>
+              <TouchableOpacity style={styles.button} onPress={() => { Linking.openURL('https://www.google.com/maps/search/?api=1&query=Viva+Dog+Hachioji') }}>
+                <Ionicons name="location-outline" style={styles.icon} size={28} />
+              </TouchableOpacity>
+              <Text style={styles.buttonText}>〒192-0073, Hachioji-shi, Tokyo</Text>
+            </View>
+          </View>
+        </ImageBackground>
       </View>
 
       <View style={styles.bottom}>
@@ -74,7 +78,7 @@ export default function App() {
 
       </View>
 
-    </View>
+    </View >
   );
 }
 
@@ -87,16 +91,17 @@ const styles = StyleSheet.create({
     flex: 0.5,
     backgroundColor: 'white',
     flexDirection: 'row',
-    justifyContent: 'space-between',
-    paddingRight: 12,
-    paddingLeft: 12,
+    justifyContent: 'flex-start',
+    paddingLeft: 16,
     paddingTop: 12,
+    paddingBottom: 1,
   },
   headerText: {
     alignSelf: 'flex-end',
     paddingBottom: 4,
     fontSize: 25,
     color: 'black',
+    marginLeft: 12,
   },
   image: {
     height: 40,
@@ -111,8 +116,7 @@ const styles = StyleSheet.create({
     paddingRight: 12,
     paddingTop: 12,
     paddingBottom: 12,
-    borderBottomColor: 'white',
-    borderBottomWidth: 0.3,
+    backgroundColor: 'black',
   },
   text: {
     flex: 1,
@@ -125,25 +129,27 @@ const styles = StyleSheet.create({
     width: 130,
     borderRadius: 130,
     borderColor: 'white',
-    borderWidth: 0.3,
+    borderWidth: 2,
   },
   contact: {
     flex: 3,
-    justifyContent: 'space-around',
-    paddingLeft: 12,
-    paddingTop: 12,
-    paddingBottom: 12,
+  },
+  buttons: {
+    flex: 1,
+    justifyContent: 'center',
   },
   buttonContainer: {
     alignItems: 'center',
     flexDirection: 'row',
+    marginLeft: 20,
+    marginBottom: 12,
   },
   button: {
-    borderWidth: 1,
-    borderColor: 'white',
-    backgroundColor: 'red',
-    width: 50,
-    height: 50,
+    borderWidth: 2,
+    borderColor: 'red',
+    backgroundColor: 'white',
+    width: 40,
+    height: 40,
     borderRadius: 50,
     justifyContent: 'center',
   },
@@ -154,12 +160,12 @@ const styles = StyleSheet.create({
     marginLeft: 12,
   },
   icon: {
-    color: 'white',
+    color: 'black',
     alignSelf: 'center',
   },
   bottom: {
     flex: 1,
-    backgroundColor: 'white',
+    backgroundColor: 'black',
   },
   socialContainer: {
     alignItems: 'center',
