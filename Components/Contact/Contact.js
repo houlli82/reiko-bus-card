@@ -2,6 +2,7 @@ import React from "react";
 import { View, ImageBackground, TouchableOpacity, Text } from 'react-native';
 import { aboutStyle } from './styles';
 import Ionicons from '@expo/vector-icons/Ionicons';
+import { Linking } from 'react-native';
 
 export default class Header extends React.Component {
   render() {
