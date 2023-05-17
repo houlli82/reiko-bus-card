@@ -2,7 +2,7 @@ import { StyleSheet, View } from 'react-native';
 import Header from "./Components/Header/Header";
 import About from "./Components/About/About";
 import Contact from "./Components/Contact/Contact";
-import Bottom from "./Components/Bottom/Bottom"
+import Bottom from "./Components/Bottom/Bottom";
 
 export default function App() {
   return (

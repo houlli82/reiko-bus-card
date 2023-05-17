@@ -16,6 +16,7 @@ text: {
   fontSize: 14,
   color: 'white',
   paddingRight: 8,
+  fontFamily: 'monospace',
 },
 profile: {
   height: 130,

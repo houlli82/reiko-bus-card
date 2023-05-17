@@ -12,7 +12,7 @@ export default class Header extends React.Component {
           <View>
             <View style={aboutStyle.buttonContainer}>
               <TouchableOpacity style={aboutStyle.button} onPress={() => { Linking.openURL('https://www.vivadog.jp'); }}>
-                <Ionicons name="globe-outline" style={aboutStyle.icon} size={28} />
+                <Ionicons name="globe-outline" style={aboutStyle.icon} size={32} />
               </TouchableOpacity>
               <Text style={aboutStyle.buttonText}>www.vivadog.jp</Text>
             </View>

@@ -15,6 +15,7 @@ buttonContainer: {
   marginBottom: 12,
 },
 button: {
+  flexDirection: 'row',
   borderWidth: 2,
   borderColor: 'red',
   backgroundColor: 'white',
@@ -26,13 +27,14 @@ button: {
 buttonText: {
   alignSelf: 'center',
   color: 'white',
-  fontSize: 16,
+  fontSize: 18,
   marginLeft: 12,
 },
 icon: {
   color: 'black',
   alignSelf: 'center',
-}
+
+},
 });
 
 export { aboutStyle }
