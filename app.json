@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "Reiko Houlli",
+    "description": "Your app description",
     "slug": "reiko-bus-card",
     "version": "1.0.0",
     "orientation": "portrait",
