@@ -9,7 +9,7 @@ export default class About extends React.Component {
       <View style={aboutStyle.about}>
         <Text style={aboutStyle.text}>Hello,{"\n"}{"\n"}I'm Reiko Houlli, CEO of VIVA! DOG.{"\n"}{"\n"}VIVA! DOG opened in 2003 with the aim to provide quality pet grooming and boarding.</Text>
         <Image source={Reiko} style={aboutStyle.profile} />
-    </View>
+      </View>
     );
   }
 }

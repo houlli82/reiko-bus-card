@@ -1,0 +1,62 @@
+Arguments: 
+  /home/mark_houlli/.nvm/versions/node/v16.13.1/bin/node /home/mark_houlli/.nvm/versions/node/v16.13.1/bin/yarn add @expo-google-fonts/Montserrat
+
+PATH: 
+  ./bin:./node_modules/.bin:/home/mark_houlli/.nvm/versions/node/v16.13.1/bin:/home/mark_houlli/.rbenv/shims:/home/mark_houlli/.rbenv/bin:/home/mark_houlli/.vscode-server/bin/ee2b180d582a7f601fa6ecfdad8d9fd269ab1884/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/Intel/WiFi/bin/:/mnt/c/Program Files/Common Files/Intel/WirelessCommon/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Calibre2/:/mnt/c/Program Files (x86)/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Program Files/Intel/Intel(R) Management Engine Components/DAL:/mnt/c/Users/Mark/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Mark/AppData/Local/atom/bin:/mnt/c/Users/Mark/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/Mark/AppData/Roaming/npm:/usr/local/sbin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  16.13.1
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@expo-google-fonts%2fMontserrat: Not found
+      at Request.params.callback [as _callback] (/home/mark_houlli/.nvm/versions/node/v16.13.1/lib/node_modules/yarn/lib/cli.js:66138:18)
+      at Request.self.callback (/home/mark_houlli/.nvm/versions/node/v16.13.1/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (node:events:390:28)
+      at Request.<anonymous> (/home/mark_houlli/.nvm/versions/node/v16.13.1/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (node:events:390:28)
+      at IncomingMessage.<anonymous> (/home/mark_houlli/.nvm/versions/node/v16.13.1/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (node:events:509:28)
+      at IncomingMessage.emit (node:events:402:35)
+      at endReadableNT (node:internal/streams/readable:1343:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "name": "reiko-bus-card",
+    "version": "1.0.0",
+    "main": "node_modules/expo/AppEntry.js",
+    "scripts": {
+      "start": "expo start",
+      "android": "expo start --android",
+      "ios": "expo start --ios",
+      "web": "expo start --web"
+    },
+    "dependencies": {
+      "@expo-google-fonts/caveat": "^0.2.3",
+      "@expo-google-fonts/inter": "^0.2.3",
+      "@expo/webpack-config": "^18.0.1",
+      "expo": "~48.0.10",
+      "expo-font": "~11.1.1",
+      "expo-status-bar": "~1.4.4",
+      "react": "18.2.0",
+      "react-dom": "18.2.0",
+      "react-native": "0.71.6",
+      "react-native-web": "~0.18.10"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.20.0"
+    },
+    "private": true
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
